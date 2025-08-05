@@ -12,3 +12,54 @@
 - JsonWebToken
 - Sdk do Mercado Pago
 
+## 📡 API Reference
+
+### Autenticação
+
+`POST /api/register`
+```json
+// Request
+{
+  "email": "exampleemail@gmail.com",
+  "password": "senha123",
+  "role": "your-role",
+  "establishmentId": "establishmentId"
+}
+
+// Response (400)
+
+{
+  "message": "Email, senha e papel são obrigatórios."
+}
+
+{
+  "message": "Funcionários devem ser associados a um estabelecimento existente."
+}
+
+// Response (409)
+
+{
+  "message": "Usuário com este email já existe."
+}
+
+// Response (500)
+
+{
+  "message": "Erro interno do servidor."
+}
+
+// Response (201)
+
+{
+  "message": "Usuário registrado com sucesso!",
+  "userId": {
+                 "email": "emailexample@gmail.com",
+                 "role": "your-role",
+                 "establishmentId": "establishmentId",
+                 "planoAtivo": false,
+                 "dataExpiracaoPlano": "date"
+            }
+}
+
+
+
