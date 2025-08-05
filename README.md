@@ -19,6 +19,7 @@
 `POST /api/register`
 ```json
 // Request
+
 {
   "email": "exampleemail@gmail.com",
   "password": "senha123",
@@ -59,6 +60,39 @@
                  "planoAtivo": false,
                  "dataExpiracaoPlano": "date"
             }
+}
+
+```
+`POST /api/login`
+```json
+// Request
+
+{
+  "email": "emailexample@gmail.com",
+  "password": "senha123"
+}
+
+// Response (400)
+
+{
+  "message": "Credenciais inválidas."
+}
+
+// Response (500)
+
+{
+  "message": "Erro interno do servidor."
+}
+
+// Response (200)
+
+{
+ "message": "Login bem-sucedido!",
+ "token": "tokenJWT",
+ "role": "role",
+ "establishmentId": "establishmentId",
+ "planoAtivo": "planoAtivo",
+ "dataExpiracaoPlano": "user.dataExpiracaoPlano"
 }
 
 
