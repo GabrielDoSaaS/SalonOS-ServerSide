@@ -5,3 +5,10 @@
  -  Gerenciamento de funcionários e valores de seus serviços
  -  Exigir pagamento antecipado na plataforma para reservar horário
 
+
+### Tecnologias utilizadas
+- Node.js + Express 
+- MongoDB + Mongoose
+- JsonWebToken
+- Sdk do Mercado Pago
+
